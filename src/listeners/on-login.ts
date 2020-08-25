@@ -5,7 +5,7 @@ const schedule = require('node-schedule')
 const  scheduleCronstyle = () => {
 
   // 每天的8点30分1秒触发
-  schedule.scheduleJob('0 26 10 * * *', async () => {
+  schedule.scheduleJob('0 27 10 * * *', async () => {
     // eslint-disable-next-line no-console
     console.log('new Date~~~~~~~~', new Date())
     await bick()
