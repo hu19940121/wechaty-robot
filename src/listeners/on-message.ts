@@ -6,6 +6,7 @@ import {
 import { getMusic } from '../api/music'
 import bot from '../index'
 import { noticeAdminParams } from '../interface/index'
+import bick from '../functions/bike'
 /**
  * 通知管理员去更新曲库
  * @param obj noticeAdminParams
@@ -22,6 +23,11 @@ export default async (msg: Message) => {
   }
 
   log.info(`${msg.from()?.name()}说了${msg.text()}`)
+
+  if (msg.text() === '单车') {
+    await bick()
+    return
+  }
   const res:any = await getMusic({
     keywords: msg.text(),
     pageIndex: 1,
