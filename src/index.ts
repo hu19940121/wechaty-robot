@@ -6,6 +6,8 @@ import onMessage from './listeners/on-message'
 import onLogout from './listeners/on-logout'
 
 const { PuppetPadplus } = require('wechaty-puppet-padplus') // padplus协议包
+// eslint-disable-next-line no-console
+console.log('new Date~~~~~~~~', new Date())
 
 const bot = new Wechaty({
   name: 'chat',
